@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button class="theme-switch">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-text">Toggle Theme</span>
+</button>
+
+    <div class="sidebar">
+        <div class="logo">Typing Pro</div>
+        <div class="menu-category">
+            <div class="menu-header">Practice Modes</div>
+            <div class="menu-item active" data-mode="basic">
+                <i class="fas fa-keyboard"></i> Basic Typing
+            </div>
+            <div class="submenu">
+                <div class="submenu-item" data-level="home-keys">Home Keys</div>
+                <div class="submenu-item" data-level="all-letters">All Letters</div>
+                <div class="submenu-item" data-level="punctuation">Punctuation</div>
+                <div class="submenu-item" data-level="symbols">Symbols</div>
+                <div class="submenu-item" data-level="words">Common Words</div>
+                <div class="submenu-item" data-level="sentences">Sentences</div>
+            </div>
+            
+            <div class="menu-item" data-mode="programming">
+                <i class="fas fa-code"></i> Programming
+            </div>
+            <div class="submenu">
+                <div class="submenu-item" data-level="python">Python</div>
+                <div class="submenu-item" data-level="javascript">JavaScript</div>
+                <div class="submenu-item" data-level="java">Java</div>
+                <div class="submenu-item" data-level="c">C</div>
+                <div class="submenu-item" data-level="cpp">C++</div>
+                <div class="submenu-item" data-level="html-css">HTML/CSS</div>
+            </div>
+            
+            <div class="menu-item" data-mode="challenge">
+                <i class="fas fa-trophy"></i> Challenges
+            </div>
+            <div class="submenu">
+                <div class="submenu-item" data-level="speed-test">Speed Test</div>
+                <div class="submenu-item" data-level="distraction">Distraction Test</div>
+                <div class="submenu-item" data-level="no-look">No Look</div>
+                <div class="submenu-item" data-level="symbol-mix">Symbol Mix</div>
+                <div class="submenu-item" data-level="long-text">Long Text</div>
+            </div>
+        </div>
+        
+        <div class="settings">
+            <div class="menu-header">Settings</div>
+            <div class="setting-item">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label for="duration">Duration (min):</label>
+                <select id="duration">
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <button id="new-text-btn" class="btn">
+                <i class="fas fa-sync-alt"></i> New Text
+            </button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1 id="current-level-title">Home Keys Practice</h1>
+            <p id="level-description">Practice the home row keys (ASDF JKL;)</p>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-value" id="wpm">0</div>
+                <div class="stat-label">WPM</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="accuracy">100%</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="time">0:00</div>
+                <div class="stat-label">Time</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="chars">0</div>
+                <div class="stat-label">Chars</div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div id="text-display" class="text-display"></div>
+        
+        <input type="text" id="input-field" class="input-field" autocomplete="off" autofocus placeholder="Start typing here...">
+        
+        <div class="keyboard">
+            <!-- Keyboard rows will be generated by JavaScript -->
+        </div>
+
+        <div id="result-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Test Completed!</h2>
+                <div class="result-stats">
+                    <div class="result-stat">
+                        <span>WPM:</span>
+                        <span id="result-wpm">0</span>
+                    </div>
+                    <div class="result-stat">
+                        <span>Accuracy:</span>
+                        <span id="result-accuracy">100%</span>
+                    </div>
+                    <div class="result-stat">
+                        <span>Time:</span>
+                        <span id="result-time">0:00</span>
+                    </div>
+                    <div class="result-stat">
+                        <span>Characters:</span>
+                        <span id="result-chars">0</span>
+                    </div>
+                    <div class="result-stat">
+                        <span>Mistakes:</span>
+                        <span id="result-mistakes">0</span>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button id="try-again-btn" class="btn primary">Try Again</button>
+                    <button id="new-level-btn" class="btn">New Level</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="distractions"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
