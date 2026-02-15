@@ -26,23 +26,23 @@ Because coding fast means building fast.
 
 ## ✨ Features
 
-- ✅ Real-time WPM & Accuracy tracking  
-- ✅ Practice Mode – Master home keys, symbols & coding syntax  
-- ✅ Programming Challenges – Type real code snippets  
-- ✅ Progress Tracking – Monitor speed, accuracy & streaks  
-- ✅ Developer-focused typing patterns  
-- ✅ 100+ coders can be trained with proven results  
+-  Real-time WPM & Accuracy tracking  
+-  Practice Mode – Master home keys, symbols & coding syntax  
+-  Programming Challenges – Type real code snippets  
+-  Progress Tracking – Monitor speed, accuracy & streaks  
+-  Developer-focused typing patterns  
+-  100+ coders can be trained with proven results  
 
 ---
 
 ## 🚀 Benefits
 
-✔ Code at lightning speed  
-✔ Reduce development time  
-✔ Improve muscle memory  
-✔ Compete with yourself  
-✔ Increase productivity  
-✔ Build coding confidence  
+- Code at lightning speed  
+- Reduce development time  
+- Improve muscle memory  
+- Compete with yourself  
+- Increase productivity  
+- Build coding confidence  
 
 ---
 
